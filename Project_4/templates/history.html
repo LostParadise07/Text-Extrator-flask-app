@@ -1,0 +1,70 @@
+<html>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+    body {
+        background-color: #65d7f3;
+    }
+    
+    .para {
+        font-size: 25px;
+        color: #000000;
+        text-align: center;
+    }
+    
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #tes {
+        margin: 20px 20px;
+        border: 2px solid #000000;
+    }
+</style>
+
+<body>
+    <div class="para">
+        <p>Click On Image To Check Extracted Text</p>
+    </div>
+    <div class="main">
+        {% for items in data %}
+        <button type="button" id="tes" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter{{loop.index}}">
+    <img src="{{items[1]}}" alt="Image" width="300" height="300">
+    </button>
+        <div class="modal fade" id="exampleModalCenter{{loop.index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Extracted Text</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        {{items[2]}}
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        <a href="{{items[3]}}" download="{{items[0]}}.txt" class="btn btn-primary">Download</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>
