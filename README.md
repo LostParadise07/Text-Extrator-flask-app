@@ -6,5 +6,5 @@
 <br> pip install -r requirements.txt
 <br> python3 run app.py </h5>
 
-<img src="https://github.com/LostParadise07/Text-Extrator-flask-app/blob/main/Project_4/media/Screenshot%20(2).png?raw=true" >
+<img src="https://github.com/LostParadise07/Text-Extrator-flask-app/blob/main/Project_4/media/readme.png?raw=true" >
 
