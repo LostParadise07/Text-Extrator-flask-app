@@ -10,8 +10,7 @@ import os
 
 import sys
 reload(sys)
-# sys.setdefaultencoding('utf8')
-# if no media folder exists, create one
+
 if not os.path.exists('media'):
     os.makedirs('media')
 
