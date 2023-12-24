@@ -8,3 +8,5 @@
 <h3> You Need to Upload image which contains <strong> English </strong>text. </h3>
 <img src="https://github.com/LostParadise07/Text-Extrator-flask-app/blob/main/Project_4/media/readme.png?raw=true" >
 
+
+history message
